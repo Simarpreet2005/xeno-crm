@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id            Int      @id @default(autoincrement())
+  name          String
+  email         String   @unique
+  phone         String
+  totalSpent    Float
+  lastOrderDate DateTime
+
+  orders Order[]
+  communications Communication[]
+}
+
+model Order {
+  id         Int      @id @default(autoincrement())
+  amount     Float
+  orderDate  DateTime
+
+  customerId Int
+  customer   Customer @relation(fields: [customerId], references: [id])
+}
+
+model Campaign {
+  id            Int      @id @default(autoincrement())
+  name          String
+  segmentPrompt String
+  channel       String
+  message       String
+  status        String
+
+  communications Communication[]
+}
+
+model Communication {
+  id         Int      @id @default(autoincrement())
+
+  campaignId Int
+  customerId Int
+
+  status     String
+
+  sentAt     DateTime?
+  openedAt   DateTime?
+
+  converted  Boolean @default(false)
+
+  campaign   Campaign @relation(fields: [campaignId], references: [id])
+  customer   Customer @relation(fields: [customerId], references: [id])
+}
