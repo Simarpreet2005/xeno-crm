@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard";
 import Campaigns from "./pages/Campaigns";
-import AIStudio from "./pages/AIStudio";
+import AIStudio from "./pages/AiStudio";
 import Navbar from "./components/Navbar";
 
 function App() {
