@@ -2,7 +2,7 @@
 
 Xeno CRM is a modern, high-performance Customer Relationship Management and automated marketing campaign platform. It allows businesses to run AI-driven target marketing campaigns, simulate realistic delivery pipelines, and monitor conversion metrics through dynamic analytics visualizations.
 
-## 🚀 Key Features
+## Key Features
 
 1. **AI Campaign Studio**: Input prompts describing your target audience segment (e.g., *“Customers who spent more than 5000”*), automatically generate tailored marketing copy, calculate target audience size, and save campaigns directly.
 2. **Audience Segment Filtering**: Prompts are dynamically parsed (e.g., filtering for customers with `totalSpent > 5000` or `totalSpent > 15000`) to launch campaigns to highly targeted customer segments rather than blasting all users.
@@ -17,7 +17,7 @@ Xeno CRM is a modern, high-performance Customer Relationship Management and auto
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 * **Frontend**: React (Vite), Axios, Recharts, CSS Variables (with Tailwind support)
 * **Backend**: Node.js, Express.js
@@ -26,7 +26,7 @@ Xeno CRM is a modern, high-performance Customer Relationship Management and auto
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 xeno-crm/
@@ -46,7 +46,7 @@ xeno-crm/
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 * **Node.js** (v18 or higher)
@@ -75,7 +75,7 @@ npm run seed
 
 ---
 
-## 🏃 Running the Application
+## Running the Application
 
 To run the complete Xeno CRM platform, you need to spin up the **three services** in separate terminal sessions:
 
